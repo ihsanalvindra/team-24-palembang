@@ -3,163 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Team-24-Palembang</title>
     <link rel="stylesheet" href="index.css">
-    <title>Pizza Sales</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
-<body>
-    <nav></nav>
-    <header></header>
-    <main>
-        <div class="background"></div>
-        <div class="content">
-            <div class="bg-green">
-                <div class="text-36 text-white pt-2 pb-16 box-shadow-1 text-center text-verdana text-bold">
-                    <i>Pizza's Sales</i>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="brand-container">
+                    <img src="images/gambar_logo.png" alt="Logo" class="logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+            <div class="hero-section">
+                <h1>Welcome to Team-24 Palembang</h1>
+                <p>Delivering excellence through innovation and quality</p>
+                <a href="about-us.html" class="btn">Learn More</a>
+                <div class="konten">
+                    <div class="kotak_konten" id="box1"></div>
+                    <div class="kotak_konten" id="box2"></div>
+                    <div class="kotak_konten" id="box3"></div>
                 </div>
             </div>
-            <div class="mt-5 pl-16 pr-16 flex justify-between gap-20">
-                <div class="bg-green mt-8 w-full text-center box-shadow-1 text-white text-monstserrat h-60 w-700 ml-30 mr-10">
-                    <div class="text-12 pt-8">QUANTITY</div>
-                    <div class="text-24 pb-16"><span id="total-quantity">0</span></div>
-                </div>                
-                <div class="bg-green mt-8 w-full text-center box-shadow-1 text-white text-monstserrat h-60 w-700 mr-40">
-                    <div class="text-12 pt-8">REVENUE</div>
-                    <div class="text-24 pb-16">$<span id="total-price">0.00</span></div>
-                </div>                
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">FILTER MONTH
-                        <i class="fas fa-caret-down" id="pad"></i></button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <input type="text" placeholder=" type to search.." id="myInput" onkeyup="filterFunction()">
-                        <input type="checkbox" id="bulan-1" value="1">
-                        <label for="bulan-1">Januari</label><br>
-                        <input type="checkbox" id="bulan-2" value="2">
-                        <label for="bulan-2">Februari</label><br>
-                        <input type="checkbox" id="bulan-3" value="3">
-                        <label for="bulan-3">Maret</label><br>
-                        <input type="checkbox" id="bulan-4" value="4">
-                        <label for="bulan-4">April</label><br>
-                        <input type="checkbox" id="bulan-5" value="5">
-                        <label for="bulan-5">Mei</label><br>
-                        <input type="checkbox" id="bulan-6" value="6">
-                        <label for="bulan-6">Juni</label><br>
-                        <input type="checkbox" id="bulan-7" value="7">
-                        <label for="bulan-7">Juli</label><br>
-                        <input type="checkbox" id="bulan-8" value="8">
-                        <label for="bulan-8">Agustus</label><br>
-                        <input type="checkbox" id="bulan-9" value="9">
-                        <label for="bulan-9">September</label><br>
-                        <input type="checkbox" id="bulan-10" value="10">
-                        <label for="bulan-10">Oktober</label><br>
-                        <input type="checkbox" id="bulan-11" value="11">
-                        <label for="bulan-11">November</label><br>
-                        <input type="checkbox" id="bulan-12" value="12">
-                        <label for="bulan-12">Desember</label><br>
-                        <div class="cek">
-                        <button onclick="checkAll()">Check All</button>
-                        <button onclick="uncheckAll()">Uncheck All</button>
-                        </div>
-                    </div>
-                  </div>
-                </section>
-                <div>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" id="filter-pizza" onclick="toggleDropdown()">FILTER PIZZA NAME
-                            <i class="fas fa-caret-down" id="pad"></i></button>
-                        <div id="dropdown-menu" class="dropdown-menu">
-                            <input class="w-370 h-20" type="text" placeholder=" type to search.." id="searchInput" onkeyup="filterFunction()">
-                                <input type="checkbox" id="mexicana" value="mexicana" checked>
-                                <label for="mexicana">The Mexicana Pizza</label><br>
-                                <input type="checkbox" id="cknalfredo" value="ckn_alfredo" checked>
-                                <label for="cknalfredo">The Chicken Alfredo Pizza</label><br>
-                                <input type="checkbox" id="calabrese" value="calabrese" checked>
-                                <label for="calabrese">The Calabrese Pizza</label><br>
-                                <input type="checkbox" id="greengarden" value="green_garden" checked>
-                                <label for="greengarden">The Green Garden Pizza</label><br>
-                                <input type="checkbox" id="greek" value="the_greek" checked>
-                                <label for="greek">The Greek Pizza</label><br>
-            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="">
-                <div class="mt-8 w-full text-center text-roboto text-bold">
-                    <div class="flex justify-around"> 
-                        <div class="chart1">
-                            <!-- Isi kotak kiri di sini -->
-                            <p class="text-14">SALES/MONTH</p>
-                            <canvas height="300" width="400" id="myChart"></canvas>
-                        </div>
-                        <div class="chart2" style="display: flex; align-items: center;">
-                            <canvas height="300" width="300" id="myChart1"></canvas>
-                        </div>
-                        <div style="width: 20%;">
-                            <table class="right-box" id="tabel">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>PRICE</th>
-                                        <th>SIZE</th>
-                                        <th>QUANTITY</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="table-body">
-                                    <!-- Data will be inserted here dynamically -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-               <div class="flex justify-around">
-                <div >
-                    <h3 style="text-align: center; margin-bottom: 0px;">SALES/DAY</h3>
-                    <canvas height="300"  width="600" id="myChart3"></canvas>
-                </div>
-                <div>
-                    <h3 style="text-align: center; margin-bottom: 0px;">REVENUE/MONTH</h3>
-                    <canvas height="300" width="600" id="LineChart"></canvas>
-                </div>
-               </div>
-              <div class="flex">
-                <div class="mt-8 w-full text-center">
-                    <p class="text-14 text-roboto text-bold">AVERAGE SALES/MONTH</p>
-                    <div class="ml-30 table-wrapper">
-                        <table id="data-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>MONTH</th>
-                                    <th>REVENUE</th>
-                                    <th>SALES</th>
-                                    <th>AVERAGE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Data akan diisi oleh JavaScript -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="w-full text-center text-roboto text-bold">
-                    <p class="text-14 mb-0">CALCULATE ORDER/HOUR IN YEAR</p>
-                    <div class="flex justify-center mr-10">
-                        <div style="width: 35vw;">
-                            <canvas id="barchart"></canvas>
-                        </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-        </div>
-    </main>
-    <footer></footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <script src="index.js"></script>
-</body>
-
+           
+    </body>
+    <script src="anime.js"></script>
 </html>
