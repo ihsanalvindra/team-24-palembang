@@ -85,6 +85,9 @@ body {
     width: auto;
     text-align: center;
     background-image: url('../images/home1.png');
+    background-repeat: no-repeat; /* Mencegah gambar background berulang */
+    background-size: cover; /* Membuat gambar background menutupi seluruh elemen */
+    background-position: center; /* Memusatkan gambar background */
     color: #fff;
     padding: 0 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
