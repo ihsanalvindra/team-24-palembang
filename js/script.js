@@ -8,7 +8,7 @@ let salesPerHourChart,
   revenuePerMonthChart;
 
 // Menggunakan Fetch API untuk mengambil data dari file JSON terpisah
-fetch("pizzasales.json")
+fetch("json/pizzasales.json")
   .then((response) => response.json())
   .then((salesData) => {
     allSalesData = salesData;
