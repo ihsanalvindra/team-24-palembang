@@ -21,7 +21,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan properti ini untuk bayangan */
 }
 
 .navbar-container {
@@ -29,6 +29,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 
 .brand-container {
     display: flex;
@@ -54,7 +55,8 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    font-family: 'Arial', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 .nav-links li {
@@ -80,10 +82,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: auto;
     text-align: center;
-    background: linear-gradient(to bottom,#2C786C, #34544D);
+    background-image: url('../images/home1.png');
     color: #fff;
     padding: 0 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hero-section h1 {
