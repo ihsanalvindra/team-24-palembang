@@ -1,3 +1,32 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var loadingAnimation = anime.timeline({
+        loop: true
+    });
+    loadingAnimation
+        .add({
+            targets: '.loading-dot',
+            translateY: -20,
+            opacity: [1, 0.5],
+            duration: 500,
+            easing: 'easeInOutSine',
+            delay: anime.stagger(100, {start: 0}),
+        })
+        .add({
+            targets: '.loading-dot',
+            translateY: 0,
+            opacity: [0.5, 1],
+            duration: 500,
+            easing: 'easeInOutSine',
+            delay: anime.stagger(100, {start: 0}),
+        });
+
+    setTimeout(function() {
+        loadingAnimation.pause();
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }, 3000); // Adjust the duration of the loading screen here
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     anime({
         targets: '#box1',
