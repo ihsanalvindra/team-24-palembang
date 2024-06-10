@@ -26,18 +26,17 @@
     <main>
       <div class="background"></div>
       <div class="content">
-        <div class="mt-5 pl-16 pr-16 flex justify-between gap-20">
+        <div class="card mt-5 pl-16 pr-16 flex justify-between gap-20">
           <div
-            class="bg-green mt-8 w-full text-center box-shadow-1 text-white text-monstserrat h-60 w-700 ml-30 mr-10"
-          >
+            class=" quantity bg-green mt-8 w-full text-center box-shadow-1 text-white text-monstserrat w-500 ml-30 mr-10">
             <div class="text-12 pt-8">QUANTITY</div>
-            <div class="text-24 pb-16"><span id="total-quantity">0</span></div>
+            <div class="text-24 pb-10"><span id="total-quantity">0</span></div>
           </div>
           <div
-            class="bg-green mt-8 w-full text-center box-shadow-1 text-white text-monstserrat h-60 w-700 mr-40"
+            class="revenue bg-green mt-8 w-full text-center box-shadow-1 text-white text-monstserrat w-500 mr-20"
           >
             <div class="text-12 pt-8">REVENUE</div>
-            <div class="text-24 pb-16">$<span id="total-price">0.00</span></div>
+            <div class="text-24 pb-10">$<span id="total-price">0.00</span></div>
           </div>
           <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">
@@ -50,29 +49,29 @@
                 id="myInput"
                 onkeyup="filterFunction()"
               />
-              <input type="checkbox" id="bulan-1" value="1" />
+              <input type="checkbox" id="bulan-1" value="1" checked/>
               <label for="bulan-1">Januari</label><br />
-              <input type="checkbox" id="bulan-2" value="2" />
+              <input type="checkbox" id="bulan-2" value="2" checked/>
               <label for="bulan-2">Februari</label><br />
-              <input type="checkbox" id="bulan-3" value="3" />
+              <input type="checkbox" id="bulan-3" value="3" checked/>
               <label for="bulan-3">Maret</label><br />
-              <input type="checkbox" id="bulan-4" value="4" />
+              <input type="checkbox" id="bulan-4" value="4" checked/>
               <label for="bulan-4">April</label><br />
-              <input type="checkbox" id="bulan-5" value="5" />
+              <input type="checkbox" id="bulan-5" value="5" checked/>
               <label for="bulan-5">Mei</label><br />
-              <input type="checkbox" id="bulan-6" value="6" />
+              <input type="checkbox" id="bulan-6" value="6" checked/>
               <label for="bulan-6">Juni</label><br />
-              <input type="checkbox" id="bulan-7" value="7" />
+              <input type="checkbox" id="bulan-7" value="7" checked/>
               <label for="bulan-7">Juli</label><br />
-              <input type="checkbox" id="bulan-8" value="8" />
+              <input type="checkbox" id="bulan-8" value="8" checked/>
               <label for="bulan-8">Agustus</label><br />
-              <input type="checkbox" id="bulan-9" value="9" />
+              <input type="checkbox" id="bulan-9" value="9" checked/>
               <label for="bulan-9">September</label><br />
-              <input type="checkbox" id="bulan-10" value="10" />
+              <input type="checkbox" id="bulan-10" value="10" checked/>
               <label for="bulan-10">Oktober</label><br />
-              <input type="checkbox" id="bulan-11" value="11" />
+              <input type="checkbox" id="bulan-11" value="11" checked/>
               <label for="bulan-11">November</label><br />
-              <input type="checkbox" id="bulan-12" value="12" />
+              <input type="checkbox" id="bulan-12" value="12" checked/>
               <label for="bulan-12">Desember</label><br />
               <div class="cek">
                 <button onclick="checkAll()">Check All</button>
@@ -102,14 +101,14 @@
         <div class="">
           <div class="mt-8 w-full text-center text-roboto text-bold">
             <div class="flex justify-around">
-              <div class="chart1">
+              <div class="chart1" style="margin-left: 30px;">
                 <p class="text-14">SALES/MONTH</p>
-                <canvas height="300" width="400" id="myChart"></canvas>
+                <canvas height="300" width="500" id="myChart"></canvas>
               </div>
               <div class="chart2" style="display: flex; align-items: center">
-                <canvas height="300" width="300" id="myChart1"></canvas>
+                <canvas height="500" width="500" id="myChart1"></canvas>
               </div>
-              <div style="width: 20%">
+              <div style="width: 20%; margin-right: 30px; margin-left: 20px">
                 <table class="right-box" id="tabel">
                   <thead>
                     <tr>
@@ -126,19 +125,19 @@
               </div>
             </div>
           </div>
-          <div class="flex justify-around">
+          <div class="flex justify-around" style="margin-top: 20px;">
             <div>
-              <h3 style="text-align: center; margin-bottom: 0px">SALES/DAY</h3>
-              <canvas height="300" width="600" id="myChart3"></canvas>
+              <h3 class="text-14 text-roboto text-bold" style="text-align: center; margin-bottom: 0px">SALES/DAY</h3>
+              <canvas height="300" width="500" id="myChart3"></canvas>
             </div>
             <div>
-              <h3 style="text-align: center; margin-bottom: 0px">
+              <h3 class="text-14 text-roboto text-bold" style="text-align: center; margin-bottom: 0px">
                 REVENUE/MONTH
               </h3>
-              <canvas height="300" width="600" id="LineChart"></canvas>
+              <canvas height="300" width="500" id="LineChart"></canvas>
             </div>
           </div>
-          <div class="flex">
+          <div class="flex" style="margin-top: 20px;">
             <div class="mt-8 w-full text-center">
               <p class="text-14 text-roboto text-bold">AVERAGE SALES/MONTH</p>
               <div class="ml-30 table-wrapper">
@@ -162,7 +161,7 @@
               <p class="text-14 mb-0">CALCULATE ORDER/HOUR IN YEAR</p>
               <div class="flex justify-center mr-10">
                 <div style="width: 35vw">
-                  <canvas id="barchart"></canvas>
+                  <canvas height="300" width="500" id="barchart"></canvas>
                 </div>
               </div>
             </div>

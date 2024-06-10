@@ -161,13 +161,10 @@ function updateTotalPrice(data) {
     .toLocaleString();
 }
 
+
 function applyFilters() {
-  const pizzaCheckboxes = document.querySelectorAll(
-    '.dropdown-menu input[type="checkbox"]'
-  );
-  const monthCheckboxes = document.querySelectorAll(
-    '.dropdown-content input[type="checkbox"]'
-  );
+  const pizzaCheckboxes = document.querySelectorAll('.dropdown-menu input[type="checkbox"]');
+  const monthCheckboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
   const selectedPizzas = [];
   const selectedMonths = [];
 
@@ -183,7 +180,10 @@ function applyFilters() {
     }
   });
 
-  if (selectedPizzas.length > 0 || selectedMonths.length > 0) {
+  // Jika tidak ada checkbox yang dipilih, set filteredSalesData ke array kosong
+  if (selectedPizzas.length === 0 && selectedMonths.length === 0) {
+    filteredSalesData = [];
+  } else {
     filteredSalesData = allSalesData.filter((order) => {
       const month = new Date(order.date).getMonth() + 1; // January is 0 in JavaScript Date
       const pizzaMatch =
@@ -193,8 +193,6 @@ function applyFilters() {
         selectedMonths.length === 0 || selectedMonths.includes(month);
       return pizzaMatch && monthMatch;
     });
-  } else {
-    filteredSalesData = allSalesData; // Tampilkan semua data jika tidak ada yang dipilih
   }
 
   updateTable(filteredSalesData);
@@ -203,6 +201,7 @@ function applyFilters() {
   updateTotalPrice(filteredSalesData);
   updateAllCharts(filteredSalesData);
 }
+
 
 // Attach event listeners to checkboxes
 const pizzaCheckboxes = document.querySelectorAll(
@@ -228,7 +227,6 @@ document
 const dropdownButton = document.getElementById("filter-pizza");
 dropdownButton.addEventListener("click", function (event) {
   event.stopPropagation(); // Prevent the dropdown from closing when clicked
-  toggleDropdown();
 });
 
 // Initialize charts
@@ -798,7 +796,21 @@ function uncheckAll() {
   applyFilters(); // Update the charts after unselecting all checkboxes
 }
 
+function toggleDropdown() {
+  const dropdownMenu = document.getElementById("dropdown-menu");
+  dropdownMenu.classList.toggle("show");
+}
+
+document.addEventListener("click", function(event) {
+  const dropdown = document.getElementById("dropdown-menu");
+  const button = document.getElementById("filter-pizza");
+  if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+    dropdown.classList.remove("show");
+  }
+});
+
 // Check all month checkboxes when the page loads
 document.addEventListener("DOMContentLoaded", function () {
   checkAllMonths();
 });
+

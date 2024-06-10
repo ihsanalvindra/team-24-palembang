@@ -53,8 +53,8 @@
     padding-top: 18px;
 }
 
-.pb-16 {
-    padding-bottom: 16px;
+.pb-10 {
+    padding-bottom: 10px;
 }
 
 .pr-16 {
@@ -113,6 +113,10 @@
     width: 100%;
 }
 
+.w-500 {
+    width: 500px;
+}
+
 .gap-20 {
     gap: 20px;
 }
@@ -168,7 +172,7 @@
 
 .background {
     position: absolute;
-    top: 70%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
@@ -180,7 +184,8 @@
 }
   
 .content {
-    z-index: 2; 
+    z-index: 2;
+    padding-top: 80px; 
 }
 
 .pr-0 {
@@ -219,7 +224,7 @@
     width: 370px;
     height: 50px;
     box-sizing: border-box;
-    background-image: url('./images/Search.png');
+    background-image: url('images/Search.png');
     background-position: 10px center;
     background-repeat: no-repeat;
     background-size: 45px;
@@ -244,7 +249,7 @@
     width: 100%;
     margin-right: 0px;
     margin-top: 8px;
-    margin-right: 10px;
+    margin-right: 0px;
     height: 50px;
     font-family: "Roboto", sans-serif;
     border: none;
@@ -366,7 +371,7 @@ tr:hover {
 }
 
 .table-wrapper {
-    max-height: calc(7 * 1.6em + 1.6em); /* Approximate height for 7 rows + header */
+    max-height: calc(7 * 1.9em + 1.9em); /* Approximate height for 7 rows + header */
     overflow-y: hidden;
     position: relative;
 }
@@ -424,14 +429,15 @@ tbody {
 }
 
 .dropbtn {
-    width: 300px;
+    width: 370px;
     height: 50px;
-    background-color: #ffff;
+    background-color: white;
     color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: 1px solid gainsboro;
+    padding: 8px 25px;
     cursor: pointer;
+    transition: background-color 0.3s;
+    border-style: none;
+    text-align: left;
   }
   
   /* Dropdown button on hover & focus */
@@ -441,14 +447,14 @@ tbody {
   
   /* The search field */
   #myInput {
-    width: 300px;
+    width: 370px;
     height: 50px;
     box-sizing: border-box;
-    background-image: url('Search.png');
+    background-image: url('images/Search.png');
     background-position: 10px center;
     background-repeat: no-repeat;
     background-size: 45px;
-    font-size: 16px;
+    font-size: 12px;
     padding: 14px 20px 12px 50px;
     border: none;
     border-bottom: 1px solid #ddd;
@@ -470,7 +476,7 @@ tbody {
     display: none;
     position: absolute;
     background-color: #ffff;
-    width: 300px;
+    width: 370px;
     height: 467px;
     border: 1px solid #ddd;
     z-index: 3;
@@ -690,7 +696,7 @@ nav {
 nav ul {
     float: right;
     margin-right: 20px;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav ul li {
@@ -809,4 +815,15 @@ nav ul li a:hover {
     .caption {
         transform: translateY(-70px);
     }
+}
+
+.brand {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
 }
