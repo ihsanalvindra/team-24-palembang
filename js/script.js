@@ -410,8 +410,24 @@ function createDoughnutChart(data) {
             boxWidth: 20,
           },
         },
+        datalabels: {
+          formatter: (value, context) => {
+            const total = context.chart.data.datasets[0].data.reduce((acc, val) => acc + val, 0);
+            const percentage = (value / total * 100).toFixed(2) + '%';
+            return percentage;
+          },
+          color: 'black',
+          labels: {
+            title: {
+              font: {
+                weight: 'bold'
+              }
+            }
+          }
+        }
       },
     },
+    plugins: [ChartDataLabels],
   });
 }
 
