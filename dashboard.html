@@ -103,7 +103,7 @@
             <div class="flex justify-around">
               <div class="chart1" style="margin-left: 30px;">
                 <p class="text-14">SALES/MONTH</p>
-                <canvas height="300" width="500" id="myChart"></canvas>
+                <canvas height="250" width="600" id="myChart"></canvas>
               </div>
               <div class="chart2" style="display: flex; align-items: center">
                 <canvas height="500" width="500" id="myChart1"></canvas>
@@ -128,13 +128,13 @@
           <div class="flex justify-around" style="margin-top: 20px;">
             <div>
               <h3 class="text-14 text-roboto text-bold" style="text-align: center; margin-bottom: 0px">SALES/DAY</h3>
-              <canvas height="300" width="500" id="myChart3"></canvas>
+              <canvas height="220" width="600" id="myChart3"></canvas>
             </div>
             <div>
               <h3 class="text-14 text-roboto text-bold" style="text-align: center; margin-bottom: 0px">
                 REVENUE/MONTH
               </h3>
-              <canvas height="300" width="500" id="LineChart"></canvas>
+              <canvas height="220" width="600" id="LineChart"></canvas>
             </div>
           </div>
           <div class="flex" style="margin-top: 20px;">
@@ -159,11 +159,7 @@
             </div>
             <div class="w-full text-center text-roboto text-bold">
               <p class="text-14 mb-0">CALCULATE ORDER/HOUR IN YEAR</p>
-              <div class="flex justify-center mr-10">
-                <div style="width: 35vw">
-                  <canvas height="300" width="500" id="barchart"></canvas>
-                </div>
-              </div>
+                  <canvas height="200" width="500" id="barchart"></canvas>
             </div>
           </div>
         </div>
@@ -174,12 +170,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="js/script.js"></script>
-    <script>
-       function toggleDropdown() {
-            const dropdownMenu = document.getElementById("dropdown-menu");
-            console.log(dropdownMenu); // Debugging: memastikan elemen yang benar dipilih
-            dropdownMenu.classList.toggle("show");
-        }
-    </script>
+   
   </body>
 </html>
