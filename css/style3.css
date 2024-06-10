@@ -1,0 +1,64 @@
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin:100 auto;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content h1 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.content p {
+    margin: 10px 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .content h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Media query untuk perangkat dengan lebar maks 480px */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .content h1 {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+}

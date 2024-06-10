@@ -3,7 +3,7 @@
 
 .bg-green {
     background-color: rgb(76, 175, 80);
-}
+} 
 
 .text-12 {
     font-size: 12px;
@@ -18,7 +18,7 @@
 }
 
 .text-36 {
-    font-size: 36px;
+    font-size: 360px;
 }
 
 .text-verdana {
@@ -191,8 +191,6 @@
 .pr-0 {
     padding-right: 0px;
 }
-
-
 
 
 #pad{
@@ -570,11 +568,6 @@ input[type="checkbox"]::before {
 .right-box th {
     background-color:  rgb(76, 175, 80);
 }
- 
-
-
-
-
 .team {
     font-family: 'Montserrat', sans-serif;
 }
@@ -715,7 +708,6 @@ nav ul li a {
     border-bottom: 2px solid transparent;
     text-decoration: none;
 }
-
 nav ul li a:hover {
     background: none;
     color: #0b5c24;
@@ -731,11 +723,9 @@ nav ul li a:hover {
     cursor: pointer;
     display: none;
 }
-
 #check {
     display: none;
 }
-
 /* Media Queries for responsiveness */
 @media screen and (max-width: 952px) {
     label.logo {

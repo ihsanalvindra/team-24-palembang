@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .coming-soon {
-            text-align: center;
-        }
-        .coming-soon h1 {
-            font-size: 4rem;
-            color: #333;
-        }
-    </style>
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
-    <div class="coming-soon">
-        <h1>Coming Soon</h1>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img src="images/gambar_logo.png" alt="Logo" class="logo-img"></label>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about-us.html">About</a></li>
+        </ul>
+    </nav>           
+    <div class="about">
+        <div class="image">
+            <img src="images/gambar_logo.png" alt="Modern Image">
+        </div>
+        <div class="content">
+            <h1>About</h1>
+            <p>
+                Contains a dataset of pizza sales in a year (2015). which contains the names of the pizzas, orders, and order details. 
+            </p>
+            <p>
+                We cleaned the dataset so that we only focused on the 5 pizza sales that were not selling well, namely The Mexicana Pizza, The Calabrese Pizza, The Chicken Alfredo Pizza, The Green Garden Pizza and The Greek Pizza. 
+            </p>
+            <p>
+                Then we analyzed the five pizzas with charts and filtering made within a year.
+            </p>
+        </div>
     </div>
 </body>
 </html>
